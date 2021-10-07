@@ -362,14 +362,17 @@ body {
       margin-right: -2rem; }
 
 .review {
-  background-color: rgba(255, 255, 255, 0.3);
   box-shadow: var(--shadow-light);
   padding: 3rem;
   margin-bottom: 3.5rem;
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: var(--color-white); }
+  @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+    .review {
+      background-color: rgba(255, 255, 255, 0.3);
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px); } }
   @media only screen and (max-width: 56.25em) {
     .review {
       padding: 2rem;
@@ -538,13 +541,16 @@ body {
 
 .description {
   color: var(--color-grey-dark-1);
-  background-color: rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+  background-color: var(--color-white);
   box-shadow: var(--shadow-light);
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem; }
+  @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+    .description {
+      background-color: rgba(255, 255, 255, 0.3);
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px); } }
   @media only screen and (max-width: 56.25em) {
     .description {
       padding: 2rem;
